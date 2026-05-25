@@ -130,11 +130,7 @@ Future<RefenaContainer> preInit(List<String> args) async {
     }
 
     doWhenWindowReady(() {
-      if (startHidden) {
-        unawaited(hideToTray());
-      } else {
         unawaited(showFromTray());
-      }
     });
 
     if (defaultTargetPlatform == TargetPlatform.macOS) {
